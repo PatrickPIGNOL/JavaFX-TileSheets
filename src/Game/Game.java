@@ -83,7 +83,51 @@ public class Game
 			(vYIndex < this.aMap.size())
 		)
 		{
-			this.mDrawText(pGraphicsContext, 10.0, 20.0, vFont, "ID: " + this.aMap.get(vYIndex).get(vXIndex), 0.0, Color.RED, Color.BLACK);
+			String vTileType = "";
+			switch(this.aMap.get(vYIndex).get(vXIndex))
+			{
+				case 1:
+				{
+					vTileType = "Cold Lava";
+				}break;
+				case 10:
+				case 11:
+				case 12:
+				{
+					vTileType = "Grass";
+				}break;	
+				case 13:
+				case 14:
+				case 15:
+				{
+					vTileType = "Sand";
+				}break;				
+				case 19:
+				case 20:
+				case 21:
+				{
+					vTileType = "Water";
+				}break;
+				case 37:
+				{
+					vTileType = "Lava";
+				}break;
+				case 55:
+				case 58:
+				case 61:
+				case 68:
+				case 142:
+				{
+					vTileType = "Tree";
+				}break;
+				case 129:
+				case 169:
+				{
+					vTileType = "Rocks";
+				}break;
+				
+			}
+			this.mDrawText(pGraphicsContext, 10.0, 20.0, vFont, "Tile(ID): " + vTileType + "(" + this.aMap.get(vYIndex).get(vXIndex) + ")", 0.0, Color.RED, Color.BLACK);
 		}
 		else
 		{
