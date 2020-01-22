@@ -87,7 +87,7 @@ public class Game
 		}
 		else
 		{
-			this.mDrawText(pGraphicsContext, 10.0, 20.0, vFont, "Out...", 0.0, Color.GREEN, Color.BLACK);
+			this.mDrawText(pGraphicsContext, 10.0, 20.0, vFont, "Out...", 0.0, Color.RED, Color.BLACK);
 		}
 	}
 	
